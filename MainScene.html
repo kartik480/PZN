@@ -15,42 +15,39 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         .description {
-            display: flex;
-            margin-left: auto;
-            margin-right: auto;
             text-align: center;
-            max-width: 1000px;
-            margin-bottom: 40px;
+            max-width: 100%;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
         }
 
         .description2 {
-            display: flex;
-            margin-left: auto;
-            margin-right: auto;
             text-align: center;
-            justify-content: center;
-            font-size: 5vw; /* Adjust font size based on screen width */
-            max-width: 1000px;
-            margin-bottom: 40px;
+            font-size: 2rem;
+            max-width: 100%;
+            margin-bottom: 20px;
         }
 
         .image-container {
-            margin: 20px auto;
+            margin: 0 auto;
             text-align: center;
+            padding: 10px;
         }
 
         .image-row {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+            margin: 20px 0;
         }
 
         .image-row img {
-            width: 200px;
+            width: 180px;
             margin: 10px;
             border: 8px solid white;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
@@ -67,27 +64,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
+            padding: 15px;
             background-color: red;
         }
 
         .navbar img {
-            height: 60px;
+            height: 50px;
             margin-left: 10px;
-            filter: invert(2%) brightness(2%);
-            animation: zoomInOut 5s infinite;
-        }
-
-        @keyframes zoomInOut {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.6);
-            }
-            100% {
-                transform: scale(1);
-            }
         }
 
         .navbar a {
@@ -96,41 +79,53 @@
             margin-right: 20px;
         }
 
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
             .image-row img {
-                width: 150px; /* Smaller image width for mobile */
+                width: 150px; /* Smaller image size */
             }
 
-            .description, .description2 {
-                max-width: 90%;
+            .description {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+
+            .description2 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
             }
 
             .navbar {
                 flex-direction: column;
-                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .navbar img {
+                height: 40px;
+                margin-bottom: 10px;
             }
 
             .navbar a {
                 margin-right: 10px;
+                font-size: 0.9rem;
             }
         }
 
         @media (max-width: 480px) {
             .image-row img {
-                width: 120px; /* Further reduce image size for smaller screens */
+                width: 120px;
             }
 
             .description2 {
-                font-size: 8vw; /* Adjust font size further for smaller screens */
-            }
-
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
+                font-size: 1.2rem;
             }
 
             .navbar img {
-                height: 40px; /* Reduce logo size for mobile */
+                height: 35px;
+            }
+
+            .navbar a {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -150,9 +145,7 @@
         <h1 class="maintitle cursive">#PZninja</h1>
     </div>
 
-    <br>
-
-    <div><h1 class="description2 poppins-semibold">An <span style="color:red"> Anime... </span></h1></div>
+    <div><h1 class="description2 poppins-semibold">An <span style="color:red">Anime...</span></h1></div>
     <div><h1 class="description">Clothing Brand...</h1></div>
 
     <div class="image-container">
