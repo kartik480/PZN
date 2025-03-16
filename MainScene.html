@@ -8,18 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
 
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            
-            
+            margin: 0;
+            padding: 0;
         }
-
-       
 
         .description {
             display: flex;
@@ -27,7 +23,6 @@
             margin-right: auto;
             text-align: center;
             max-width: 1000px;
-            max-height: 100px;
             margin-bottom: 40px;
         }
 
@@ -37,27 +32,26 @@
             margin-right: auto;
             text-align: center;
             justify-content: center;
-            font-size: 10lvh;
+            font-size: 5vw; /* Adjust font size based on screen width */
             max-width: 1000px;
-            max-height: 100px;
             margin-bottom: 40px;
         }
 
         .image-container {
-            margin-left: 200px;
-            margin-top: 300px;
+            margin: 20px auto;
+            text-align: center;
         }
 
         .image-row {
-            display: inline-block;
-            justify-content: space-around;
+            display: flex;
+            justify-content: center;
             align-items: center;
-            margin: 20px 0;
+            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
         }
 
         .image-row img {
             width: 200px;
-            margin: 0 50px;
+            margin: 10px;
             border: 8px solid white;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
             border-radius: 20px;
@@ -101,6 +95,44 @@
             text-decoration: none;
             margin-right: 20px;
         }
+
+        @media (max-width: 768px) {
+            .image-row img {
+                width: 150px; /* Smaller image width for mobile */
+            }
+
+            .description, .description2 {
+                max-width: 90%;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar a {
+                margin-right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-row img {
+                width: 120px; /* Further reduce image size for smaller screens */
+            }
+
+            .description2 {
+                font-size: 8vw; /* Adjust font size further for smaller screens */
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar img {
+                height: 40px; /* Reduce logo size for mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -120,7 +152,7 @@
 
     <br>
 
-    <div><h1 class="description2 poppins-semibold">An   <span style="color:red"> Anime... </span></h1></div>
+    <div><h1 class="description2 poppins-semibold">An <span style="color:red"> Anime... </span></h1></div>
     <div><h1 class="description">Clothing Brand...</h1></div>
 
     <div class="image-container">
