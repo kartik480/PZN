@@ -1,17 +1,17 @@
 .navbarshop {
-    border-top: 5px solid #000; /* Specify the color and make it solid */
-    padding: 20px;
-    background-color: #df2222;
-    z-index: 10;
-    position: relative;
-    border-left: 50px solid #000; /* Add borders on the left and right */
-    border-right: 5px solid #000;
-    box-sizing: border-box; /* Ensures the borders and padding are included in the element's total width/height */
+    
+            padding: 10px;
+            text-align: center;
+            border-top: 40px solid #db2020; /* Adds a top border */
+            z-index: 10;
+            position: relative;
+        
+            
 }
 
 
 .dressprop{
-    width: 50px; /* Adjust width */
+    width: 160px; /* Adjust width */
     height: 100vh; /* Full height of the viewport */
     background-color: #d1cbcb; /* Example background color */
     position: fixed;

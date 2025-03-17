@@ -5,17 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shopCss.css">
     <title>Shop</title>
+    <style>
+        /* Styling the picture frames */
+        .picture-frame {
+            width: 200px;
+            height: 250px;
+            border: 5px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Styling images inside the frames */
+        .picture-frame img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        /* Styling the container to hold multiple frames */
+        .frame-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     <div class="navbarshop">
         <!-- Navigation bar content -->
     </div>
 
-   
+    <div class="frame-container">
+        <!-- Multiple picture frames -->
+        <div class="picture-frame">
+            <img src="image1.jpg" alt="Image 1">
+            <p>Picture 1</p>
+        </div>
 
-    <div class="dressprop">
-        <!-- Other content -->
+        <div class="picture-frame">
+            <img src="image2.jpg" alt="Image 2">
+            <p>Picture 2</p>
+        </div>
+
+        <div class="picture-frame">
+            <img src="image3.jpg" alt="Image 3">
+            <p>Picture 3</p>
+        </div>
+
+        <div class="picture-frame">
+            <img src="image4.jpg" alt="Image 4">
+            <p>Picture 4</p>
+        </div>
+
+        <div class="picture-frame">
+            <img src="image4.jpg" alt="Image 4">
+            <p>Picture 4</p>
+        </div>
+        <div class="picture-frame">
+            <img src="image4.jpg" alt="Image 4">
+            <p>Picture 5</p>
+        </div>
     </div>
-
 </body>
 </html>
