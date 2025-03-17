@@ -6,6 +6,37 @@
     <link rel="stylesheet" href="shopCss.css">
     <title>Shop</title>
     <style>
+        /* Styling for the navigation bar */
+        .navbarshop {
+            background-color: #db2020; /* Background color for the navbar */
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
+            align-items: center; /* Vertically center the content */
+        }
+
+        .navbarshop a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none; /* Remove underline */
+            font-size: 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+
+        .navbarshop a:hover {
+            background-color: white;
+            color: #db2020; /* Hover effect */
+            border-radius: 5px;
+        }
+
+        /* Styling for the main container */
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
         /* Styling the picture frames */
         .picture-frame {
             width: 200px;
@@ -18,55 +49,65 @@
             text-align: center;
         }
 
-        /* Styling images inside the frames */
         .picture-frame img {
             max-width: 100%;
             max-height: 100%;
             object-fit: cover;
         }
 
-        /* Styling the container to hold multiple frames */
         .frame-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            width: 55%;
         }
     </style>
 </head>
 <body>
     <div class="navbarshop">
-        <!-- Navigation bar content -->
+        <!-- Navigation links aligned to the top right -->
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact Us</a>
     </div>
 
-    <div class="frame-container">
-        <!-- Multiple picture frames -->
-        <div class="picture-frame">
-            <img src="image1.jpg" alt="Image 1">
-            <p>Picture 1</p>
+    <div class="main-container">
+        <!-- Dress properties section -->
+        <div class="dressprop">
+            <!-- Dress details or image here -->
         </div>
 
-        <div class="picture-frame">
-            <img src="image2.jpg" alt="Image 2">
-            <p>Picture 2</p>
-        </div>
+        <!-- Multiple picture frames container beside dressprop -->
+        <div class="frame-container">
+            <div class="picture-frame">
+                <img src="image1.jpg" alt="Image 1">
+                <p>Picture 1</p>
+            </div>
 
-        <div class="picture-frame">
-            <img src="image3.jpg" alt="Image 3">
-            <p>Picture 3</p>
-        </div>
+            <div class="picture-frame">
+                <img src="image2.jpg" alt="Image 2">
+                <p>Picture 2</p>
+            </div>
 
-        <div class="picture-frame">
-            <img src="image4.jpg" alt="Image 4">
-            <p>Picture 4</p>
-        </div>
+            <div class="picture-frame">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Picture 3</p>
+            </div>
 
-        <div class="picture-frame">
-            <img src="image4.jpg" alt="Image 4">
-            <p>Picture 4</p>
-        </div>
-        <div class="picture-frame">
-            <img src="image4.jpg" alt="Image 4">
-            <p>Picture 5</p>
+            <div class="picture-frame">
+                <img src="image4.jpg" alt="Image 4">
+                <p>Picture 4</p>
+            </div>
+
+            <div class="picture-frame">
+                <img src="image5.jpg" alt="Image 5">
+                <p>Picture 5</p>
+            </div>
+
+            <div class="picture-frame">
+                <img src="image6.jpg" alt="Image 6">
+                <p>Picture 6</p>
+            </div>
         </div>
     </div>
 </body>

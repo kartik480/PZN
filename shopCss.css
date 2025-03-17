@@ -1,20 +1,10 @@
-.navbarshop {
-    
-            padding: 10px;
-            text-align: center;
-            border-top: 40px solid #db2020; /* Adds a top border */
-            z-index: 10;
-            position: relative;
-        
-            
-}
 
 
 .dressprop{
-    width: 160px; /* Adjust width */
-    height: 100vh; /* Full height of the viewport */
+    width: 300px; /* Adjust width */
+    height: 300vh; /* Full height of the viewport */
     background-color: #d1cbcb; /* Example background color */
-    position: fixed;
+    position:relative;
     top: 0;
     left: 0; /* Position the box on the left side */
  
