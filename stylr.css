@@ -56,5 +56,30 @@
 .background{
   background-color:#df2222
 }
+.image-poster {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-poster {
+  position: relative;
+  text-align: center;
+}
+
+.image-poster img {
+  width: 100%;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%; /* Adjust this to change the vertical position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Change text color */
+  font-size: 3rem; /* Adjust font size */
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Add shadow for better readability */
+}
+
 
 
