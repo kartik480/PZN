@@ -8,24 +8,23 @@
     <style>
         /* Styling for the navigation bar */
         .navbarshop {
-            background-color: #fa0303; /* Background color for the navbar */
+            background-color: #fa0303;
             padding: 15px;
             display: flex;
-            justify-content: flex-end; /* Align items to the right */
-            align-items: center; /* Vertically center the content */
+            justify-content: flex-end;
+            align-items: center;
         }
 
         .navbarshop a {
             color: white;
             margin-left: 20px;
-            text-decoration: none; /* Remove underline */
+            text-decoration: none;
             font-size: 15px;
-            font-weight :normal;
-                        padding: 5px 10px;
+            font-weight: normal;
+            padding: 5px 10px;
         }
 
         .navbarshop a:hover {
-        
             color: black;
             border-radius: 5px;
         }
@@ -65,14 +64,12 @@
 </head>
 <body>
     <div class="navbarshop">
-        <!-- Navigation links aligned to the top right -->
         <a href="./MainScene.html">Home</a>
         <a href="#">Shop</a>
         <a href="#">Contact Us</a>
     </div>
 
     <div class="main-container">
-        <!-- Dress properties section -->
         <div class="dressprop">
             <h3>Dress Selection</h3>
             <form>
@@ -80,60 +77,91 @@
                 <select id="gender" name="gender">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
-                   
+                    <option value="unisex">Unisex</option>
                 </select><br><br>
-        
+
                 <label for="category">Category:</label>
                 <select id="category" name="category">
-                    <option value="formal">Anime</option>
-                    <option value="casual">PZNinja</option>
-                   
+                    <option value="formal">Formal Wear</option>
+                    <option value="casual">Casual Wear</option>
+                    <option value="sports">Sports Wear</option>
                 </select><br><br>
-        
+
                 <label for="age-group">Age Group:</label>
                 <select id="age-group" name="age-group">
-                    <option value="children">10-18 years</option>
-                    <option value="Teen">18-20 years</option>
-                    <option value="Adult">20-30 years</option>
-                   
-                    
+                    <option value="children">0-12 years</option>
+                    <option value="teen">13-18 years</option>
+                    <option value="adult">18-35 years</option>
+                    <option value="middle-aged">35-50 years</option>
                 </select><br><br>
             </form>
         </div>
-        
 
-        <!-- Multiple picture frames container beside dressprop -->
-        <div class="frame-container">
+        <div class="frame-container" id="frameContainer">
             <div class="picture-frame">
                 <img src="image1.jpg" alt="Image 1">
                 <p>Picture 1</p>
             </div>
-
-            <div class="picture-frame">
-                <img src="image2.jpg" alt="Image 2">
-                <p>Picture 2</p>
-            </div>
-
-            <div class="picture-frame">
-                <img src="image3.jpg" alt="Image 3">
-                <p>Picture 3</p>
-            </div>
-
-            <div class="picture-frame">
-                <img src="image4.jpg" alt="Image 4">
-                <p>Picture 4</p>
-            </div>
-
-            <div class="picture-frame">
-                <img src="image5.jpg" alt="Image 5">
-                <p>Picture 5</p>
-            </div>
-
-            <div class="picture-frame">
-                <img src="image6.jpg" alt="Image 6">
-                <p>Picture 6</p>
-            </div>
+            <!-- Default images -->
         </div>
     </div>
+
+    <script>
+        const genderSelect = document.getElementById('gender');
+        const categorySelect = document.getElementById('category');
+        const ageGroupSelect = document.getElementById('age-group');
+        const frameContainer = document.getElementById('frameContainer');
+
+        // Sample product data based on selections
+        const products = {
+            male: {
+                formal: ["male_formal1.jpg", "male_formal2.jpg" , "male_formal2.jpg" ],
+                casual: ["male_casual1.jpg", "male_casual2.jpg"],
+                sports: ["male_sports1.jpg", "male_sports2.jpg"]
+            },
+            female: {
+                formal: ["female_formal1.jpg", "female_formal2.jpg"],
+                casual: ["female_casual1.jpg", "female_casual2.jpg"],
+                sports: ["female_sports1.jpg", "female_sports2.jpg"]
+            },
+            unisex: {
+                formal: ["unisex_formal1.jpg", "unisex_formal2.jpg"],
+                casual: ["unisex_casual1.jpg", "unisex_casual2.jpg"],
+                sports: ["unisex_sports1.jpg", "unisex_sports2.jpg"]
+            }
+        };
+
+        function updateFrames() {
+            // Clear the frame container first
+            frameContainer.innerHTML = '';
+
+            // Get selected values
+            const selectedGender = genderSelect.value;
+            const selectedCategory = categorySelect.value;
+
+            // Retrieve corresponding products
+            const selectedProducts = products[selectedGender][selectedCategory];
+
+            // Dynamically add product images to the container
+            selectedProducts.forEach(imageSrc => {
+                const pictureFrame = document.createElement('div');
+                pictureFrame.classList.add('picture-frame');
+                
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = 'Product Image';
+
+                pictureFrame.appendChild(img);
+                frameContainer.appendChild(pictureFrame);
+            });
+        }
+
+        // Add event listeners
+        genderSelect.addEventListener('change', updateFrames);
+        categorySelect.addEventListener('change', updateFrames);
+        ageGroupSelect.addEventListener('change', updateFrames);
+
+        updateFrames(); // Call initially to load default data
+    </script>
 </body>
 </html>
