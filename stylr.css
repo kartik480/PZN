@@ -76,10 +76,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; /* Change text color */
-  font-size: 3rem; /* Adjust font size */
+  font-size: 1.9rem; /* Adjust font size */
   font-family: 'Poppins', sans-serif;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Add shadow for better readability */
 }
+
+
 
 
 
