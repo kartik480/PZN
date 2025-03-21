@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shopCss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
     <title>Shop</title>
     <style>
         /* Styling for the navigation bar */
@@ -20,8 +24,9 @@
             margin-left: 20px;
             text-decoration: none;
             font-size: 15px;
-            font-weight: normal;
+            font-weight:bold;
             padding: 5px 10px;
+            font-family:sans-serif;
         }
 
         .navbarshop a:hover {
@@ -34,6 +39,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            
         }
 
         /* Styling the picture frames */
@@ -71,7 +77,7 @@
 
     <div class="main-container">
         <div class="dressprop">
-            <h3>Dress Selection</h3>
+            <h3 class="dressSelect">Dress Selection</h3>
             <form>
                 <label for="gender">Gender:</label>
                 <select id="gender" name="gender">
@@ -162,6 +168,8 @@
         ageGroupSelect.addEventListener('change', updateFrames);
 
         updateFrames(); // Call initially to load default data
+        
     </script>
+    
 </body>
 </html>

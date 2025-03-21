@@ -14,7 +14,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bytesized&family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
 
+
     <style>
+          .image-poster {
+            position: relative;
+            text-align: center;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 5rem; /* Default for larger screens */
+            font-weight: bold;
+            
+            padding: 10px;
+        }
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -129,6 +146,9 @@
                 margin-right: 10px;
                 font-size: 0.9rem;
             }
+            .text-overlay {
+                font-size: 2rem; /* Adjust font size for tablets */
+            }
         }
 
         @media (max-width: 480px) {
@@ -146,6 +166,9 @@
 
             .navbar a {
                 font-size: 0.8rem;
+            }
+            .text-overlay {
+                font-size: 1.5rem; /* Adjust font size for mobile */
             }
 
             
